@@ -6,12 +6,11 @@
 //second solution: O(n) time, O(n) space
 
 function twoNumberSum(array, targetSum) {
-    // Write your code here.
     const nums = {};
     for (const num of array) {
         const potential = targetSum - num;
         if (potential in nums) {
-            return [potential, num]
+            return [potential, num];
         } else {
             nums[num] = true;
         }

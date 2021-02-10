@@ -4,12 +4,12 @@
 //{"array": [5, 1, 22, 25, 6, -1, 8, 10], "sequence": [1, 6, -1, 10]}
 // returns true because that sequence is a part of the array
 
-function isValidSequence(array, sequence) {
+function isValidSubsequence(array, sequence) {
     let seqIdx = 0;
-    for (const value of array) {
+    for (const num of array) {
         if (seqIdx === sequence.length) break;
-        if (sequence[seqIdx] === value) {
-            seqIdx++;
+        if (sequence[seqIdx] === num) {
+            seqIdx += 1;
         }
     }
 

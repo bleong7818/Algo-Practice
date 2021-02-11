@@ -3,6 +3,7 @@
 // sorted = [1, 2, 2, 3, 6]
 //output = 17 = (0 + 1 + 3 + 5 + 8)
 
+0 + q[0] + (q[0] + q[1]) + (q[0] + q[1] + q[2]) + (q[0] + q[1] + q[2] + q[3])
 
 
 function minimumWaitingTime(queries) {
@@ -16,3 +17,6 @@ function minimumWaitingTime(queries) {
     }
     return totalWaitingTime;
 }
+
+let testing = [3, 2, 1, 2, 6];
+console.log(minimumWaitingTime(testing));

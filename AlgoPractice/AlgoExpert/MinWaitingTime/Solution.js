@@ -16,3 +16,6 @@ function minimumWaitingTime(queries) {
     }
     return totalWaitingTime;
 }
+
+let testing = [3, 2, 1, 2, 6];
+console.log(minimumWaitingTime(testing));

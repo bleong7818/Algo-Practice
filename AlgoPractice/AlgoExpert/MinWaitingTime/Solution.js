@@ -12,7 +12,6 @@ function minimumWaitingTime(queries) {
         const duration = queries[i];
         const queriesLeft = queries.length - (i + 1);
         totalWaitingTime += duration * queriesLeft;
-        debugger;
     }
     return totalWaitingTime;
 }

@@ -55,7 +55,7 @@ var romanToInt = function (s) {
     return output;
 };
 
-let s = "IV"
+let s = "IV";
 console.log("hi");
 console.log(romanToInt(s));
 

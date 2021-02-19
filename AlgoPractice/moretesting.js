@@ -1,33 +1,24 @@
-function letterCase(letter) {
-    if (letter === letter.toUpperCase()) {
-        return true;
-    } else {
-        return false;
-    }
-}
+function playlist(songs) {
+    // Write your code here
+    songs.sort((a, b) => a - b);
+    let i = 0;
+    let j = songs.length - 1;
+    let n = 0;
 
-// console.log(letterCase('f'));
+    while (i < j) {
+        const pairLength = songs[i] + songs[j];
 
-function solution(string) {
-    const splitString = string.split("");
-
-    let balanceNum = 0;
-    for (let i = 0; i < splitString.length; i++) {
-        const currentLetter = splitString[i];
-        if (letterCase(currentLetter)) {
-            if (splitString.includes(currentLetter.toLowerCase())) {
-                balanceNum += 1;
-            }
-        } else {
-            if (splitString.includes(currentLetter.toUpperCase())) {
-                balanceNum += 1;
-            }
+        if (pairLength % 60 === 1) {
+            n += 1;
+            i++;
+            j--;
+        }
+        else if (pairLength % 60 > 1) {
+            i++;
+        }
+        else if (pairLength % 60 < 1) {
+            j--;
         }
     }
-
-    if (balanceNum > 0) {
-        return balanceNum;
-    } else {
-        return -1;
-    }
+    return n;
 }

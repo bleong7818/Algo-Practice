@@ -1,26 +1,25 @@
-function isPalindrome(str) {
-    console.log(str);
-    let reversed = str.reverse().join("");
-    console.log(reversed);
-    return str === reversed;
-}
-
-function scatterPalindrome(strToEvaluate) {
+function getUmbrellas(requirement, sizes) {
     // Write your code here
-    let string = strToEvaluate.pop();
-    let splitString = string.split("");
-    let palindromes = [];
-    for (let i = 0; i < splitString.length; i++) {
-        palindromes.push(splitString[i]);
-        for (let j = i + 1; j < splitString.length; j++) {
-            const testing = splitString.slice(i, j);
-            // isPalindrome(testing);
-            if (isPalindrome(testing)) {
-                palindromes.push(testing);
-            }
+    const nums = {};
+    let n = 0;
+    debugger;
+    for (let i = 0; i < sizes.length; i++) {
+        const current = sizes[i];
+        const potential = requirement - current;
+        debugger;
+        if (current === requirement) {
+            n += 1;
+        }
+        else if (potential in nums) {
+            n += 2;
+        }
+        else {
+            nums[current] = true;
         }
     }
-    return palindromes.length;
+
+    if (n === 0) return -1;
+    return n;
 }
-const string = ['aabb'];
-console.log(scatterPalindrome(string));
+
+console.log(getUmbrellas(4, [2, 4]));

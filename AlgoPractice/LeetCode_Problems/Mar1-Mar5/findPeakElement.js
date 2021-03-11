@@ -24,3 +24,7 @@ var findPeakElement = function (nums) {
 
     return peaks;
 };
+
+var findPeakElement = function (nums) {
+    return nums.indexOf(Math.max(...nums));
+}

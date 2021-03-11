@@ -1,34 +1,55 @@
-function flattenObject(object) {
-    let flattenedObject = {};
+// function flattenObject(object) {
+//     let flattenedObject = {};
     
-    for (const key in object) {
-        if (Array.isArray(object[key])) {
-            for (let i = 0; i < object[key].length; i++) {
-                if (object[key][i] === 'object' && object[key][i] !== null) {
-                    for (const nestedKey in object[key][i]) {
-                        let newKey = [key, i, nestedKey].join('.');
-                        flattenedObject[newKey] = object[key][i][nestedKey];
-                    }
-                }
-                else if (Array.isArray(object[key][i])) {
-                    for (let j = 0; j < object[key][i].length; i++) {
-                        let arrayKey = [key, i, j].join('.');
-                        flattenedObject[arrayKey] = object[key][i][j];
-                    }
-                }
-            }
+//     for (const key in object) {
+//         if (Array.isArray(object[key])) {
+//             for (let i = 0; i < object[key].length; i++) {
+//                 if (object[key][i] === 'object' && object[key][i] !== null) {
+//                     for (const nestedKey in object[key][i]) {
+//                         let newKey = [key, i, nestedKey].join('.');
+//                         flattenedObject[newKey] = object[key][i][nestedKey];
+//                     }
+//                 }
+//                 else if (Array.isArray(object[key][i])) {
+//                     for (let j = 0; j < object[key][i].length; i++) {
+//                         let arrayKey = [key, i, j].join('.');
+//                         flattenedObject[arrayKey] = object[key][i][j];
+//                     }
+//                 }
+//             }
+//         }
+//         else if (object[key] === 'object' && object[key] !== null) {
+//             for (const lessNestedKey in object[key]) {
+//                 let nestedObjectKey = [key, lessNestedKey];
+//                 flattenedObject[nestedObjectKey] = object[key];
+//             }
+//         }
+//         else {
+//             flattenedObject[key] = object[key];
+//         }
+//     }
+//     return flattenedObject;
+// }
+
+function flatten(object, parent, res = {}) {
+    for (let key in object) {
+        let parentName = parent ? parent + "." + key : key;
+        if (typeof obj[key] == 'object') {
+            flatten(obj[key], parentName, res);
         }
-        else if (object[key] === 'object' && object[key] !== null) {
-            for (const lessNestedKey in object[key]) {
-                let nestedObjectKey = [key, lessNestedKey];
-                flattenedObject[nestedObjectKey] = object[key];
+        else if (Array.isArray(obj[key])) {
+            for (let i = 0; i < obj[key].length; i++) {
+                let newParentName = i + "." + parentName;
+                if (typeof obj[key] == 'object') {
+                    flatten(obj[key], newParentName, res);
+                }
             }
         }
         else {
-            flattenedObject[key] = object[key];
+            res[parentName] = obj[key];
         }
     }
-    return flattenedObject;
+    return res;
 }
 
 function unflatten(object) {
@@ -42,6 +63,7 @@ function unflatten(object) {
     }
     return result;
 }
+
 
 
 // {

@@ -1,6 +1,5 @@
 function groupAnagrams(words) {
     let anagramHash = {};
-
     for (const word of words) {
         let sortedWord = word.split('').sort().join('');
         if (sortedWord in anagramHash) {
@@ -10,7 +9,6 @@ function groupAnagrams(words) {
             anagramHash[sortedWord] = [word];
         }
     }
-
     return Object.values(anagramHash);
 }
 

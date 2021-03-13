@@ -1,27 +1,38 @@
-let root = [1, null, 2, 3];
+function widestGap(n, start, finish) {
+    let spaceHash = {};
 
-function TreeNode(val, left, right) {
-    this.val = (val === undefined ? 0 : val);
-    this.left = (left === undefined ? null : left);
-    this.right = (right === undefined ? null : right);
-}
-
-const preorderTraversal = function (root) {
-    const result = [];
-
-    const traversal = (node) => {
-        if (node === null) {
-            return;
+    for (let i = 0; i < start.length; i++) {
+        let startPos = start[i];
+        let endPos = finish[i];
+        let between = [];
+        if (endPos - startPos > 1) {
+            between = Array.from(new Array(endPos - StartPos - 1), (x, i) => i + startPos + 1);
         }
 
-        result.push(node.val);
+        spaceHash[startPos] = true;
+        spaceHash[endPos] = true;
+        if (between.length !== 0) {
+            for (let n = 0; n < between.length; i++) {
+                let current = between[n];
+                spaceHash[current] = true;
+            }
+        }
+    }
+    for (let i = 1; i <= n; i++) {
+        if (!(i in spaceHash)) {
+            spaceHash[i] = false;
+        }
+    }
 
-        traversal(node.left);
-        traversal(node.right);
-    };
-
-    traversal(root);
-    return result;
-};
-
-console.log(preorderTraversal(root));
+    let maxGap = 0;
+    for (const key in spaceHash) {
+        let currentGap = 0;
+        if (spaceHash[key] === false) {
+            currentGap += 1;
+            if (currentGap > maxGap) {
+                maxGap = currentGap;
+            }
+        }
+    }
+    return maxGap;
+}

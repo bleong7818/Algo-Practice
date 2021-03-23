@@ -9,5 +9,4 @@ var rob = function (nums) {
         robbery[i] = Math.max(robbery[i - 2] + nums[i], robbery[i - 1]);
     }
     return robbery[robbery.length - 1];
-
 };

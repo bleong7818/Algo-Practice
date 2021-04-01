@@ -1,28 +1,28 @@
-function decLength(array, index) {
-    let length = 0;
+// function towerBuilder(nFloors) {
+//     if (nFloors < 1) return [];
+//     if (nFloors === 1) return ["*"];
 
-    while (array[index] >= array[index - 1] && index >= 1) {
-        if (array[index] >= array[index - 1]) {
-            length += 1;
-        }
-        index--;
+//     let base = ["*"];
+
+//     while (base.length < nFloors) {
+//         let newLevel = base[base.length - 1] + "**";
+//         base.push(newLevel);
+//     }
+
+//     return base;
+// }
+
+console.log(towerBuilder(5));
+// console.log(5 * "*");
+
+function towerBuilder(nFloors) {
+    var tower = [];
+    for (var i = 0; i < nFloors; i++) {
+        tower.push(" ".repeat(nFloors - i - 1)
+            + "*".repeat((i * 2) + 1)
+            + " ".repeat(nFloors - i - 1));
     }
-    return length;
+    return tower;
 }
 
-function incLength(array, index) {
-    let length = 0;
-
-    while (array[index] >= array[index + 1] && index <= array.length - 1) {
-        if (array[index] >= array[index + 1]) {
-            length += 1;
-        }
-        index++;
-    }
-    return length;
-}
-
-let array = [10, 11, 8, 7, 0];
-let index = 3;
-
-console.log(incLength(array, 1));
+console.log(towerBuilder(5));

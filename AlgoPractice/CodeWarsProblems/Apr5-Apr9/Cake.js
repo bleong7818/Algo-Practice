@@ -12,6 +12,5 @@ function cakes(recipe, available) {
             cakes = possibleCakes;
         }
     }
-
     return cakes;
 }

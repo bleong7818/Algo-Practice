@@ -22,7 +22,7 @@ function spiralTraverse(array) {
 
         for (let row = endRow - 1; row > startingRow; row--) {
             if (startingCol === endCol) break;
-            result.push(array[row][startingCol])
+            result.push(array[row][startingCol]);
         }
 
         startingRow++;

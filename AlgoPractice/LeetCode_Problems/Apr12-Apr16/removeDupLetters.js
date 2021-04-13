@@ -11,5 +11,4 @@ var removeDuplicateLetters = function (s) {
 };
 
 const string = "cbacdcbc";
-console.log(removeDuplicateLetters(string));
 

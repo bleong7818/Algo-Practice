@@ -1,30 +1,21 @@
-var canConstruct = function (ransomNote, magazine) {
-    const ransomHash = {};
-    const magazineHash = {};
-
-    for (let i = 0; i < ransomNote.length; i++) {
-        let letter = ransomNote[i];
-        if (letter in ransomHash) {
-            ransomHash[letter]++;
+function grouped(s) {
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === "1") {
+            // debugger;
+            if (s[i - 1] !== "1" && s[i + 1] !== "1"){
+                // debugger
+                return false;
+            } 
         } else {
-            ransomHash[letter] = 1;
+            if (s[i - 1] !== "0" && s[i + 1] !== "0") {
+                // debugger
+                return false;
+            }
         }
-    }
-
-    for (let i = 0; i < magazine.length; i++) {
-        let letter = magazine[i];
-        if (letter in magazineHash) {
-            magazineHash[letter]++;
-        } else {
-            magazineHash[letter] = 1;
-        }
-    }
-    
-    for (const key in ransomHash) {
-        if (!magazineHash[key]) return false;
-        if (ransomHash[key] > magazineHash[key]) return false;
     }
     return true;
-};
+}
 
-console.log(canConstruct("a", "b"));
+let string = "100";
+
+console.log(grouped(string));

@@ -12,9 +12,8 @@ var frequencySort = function (s) {
     }
     let sortedCharMap = new Map([...charMap.entries()].sort((a, b) => b[1] - a[1]));
 
-    sortedCharMap.forEach(function(value, key) {
+    sortedCharMap.forEach(function (value, key) {
         newString += key.repeat(value);
     });
     return newString;
 };
-console.log(frequencySort("tree"));

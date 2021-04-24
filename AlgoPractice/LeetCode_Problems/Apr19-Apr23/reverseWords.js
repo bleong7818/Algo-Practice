@@ -6,6 +6,5 @@ var reverseWords = function (s) {
         let reversed = word.split("").reverse().join("");
         newWord.push(reversed);
     }
-
     return newWord.join(" ");
 };

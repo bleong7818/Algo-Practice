@@ -8,10 +8,6 @@ var distributeCandies = function (candyType) {
         }
     }
     const candyNum = uniqueCandies.length;
-    console.log(uniqueCandies);
+    // console.log(uniqueCandies);
     return Math.min((candyType.length / 2), candyNum);
 };
-
-let candyType = [1, 1, 2, 2, 3, 3];
-// console.log(!candyType.includes(1));
-console.log(distributeCandies(candyType));

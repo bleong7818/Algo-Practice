@@ -8,6 +8,5 @@ var distributeCandies = function (candyType) {
         }
     }
     const candyNum = uniqueCandies.length;
-    // console.log(uniqueCandies);
     return Math.min((candyType.length / 2), candyNum);
 };

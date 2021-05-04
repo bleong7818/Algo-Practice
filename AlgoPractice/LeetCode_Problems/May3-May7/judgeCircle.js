@@ -1,9 +1,7 @@
-
-
 var judgeCircle = function (moves) {
     let xAxis = 0;
     let yAxis = 0;
-    // let pos = [xAxis, yAxis];
+    let pos = [xAxis, yAxis];
 
     for (let i = 0; i < moves.length; i++) {
         const move = moves[i];
@@ -22,5 +20,3 @@ var judgeCircle = function (moves) {
     }
     return (xAxis === 0 && yAxis === 0);
 };
-const moves = "UD";
-console.log(judgeCircle(moves));

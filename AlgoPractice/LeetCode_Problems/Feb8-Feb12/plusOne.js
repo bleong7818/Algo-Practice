@@ -16,8 +16,7 @@ function plusOne (digits) {
     let joined = digits.join("");
     let num = parseInt(joined);
     let newNum = num + 1;
-    // debugger;
-    // console.log(newNum);
+    
     let splitString = newNum.toString().split("");
     const newArray = [];
     for(let i = 0; i < splitString.length; i++) {

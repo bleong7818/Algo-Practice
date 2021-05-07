@@ -6,7 +6,7 @@ function rollTheString(s, roll) {
             let currentChar = newStringSplit[j];
             let newChar = rollChar(currentChar);
             newStringSplit[j] = newChar;
-            debugger
+           
         }
     }
     return newStringSplit.join("");

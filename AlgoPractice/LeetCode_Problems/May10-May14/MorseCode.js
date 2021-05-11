@@ -1,7 +1,7 @@
 var uniqueMorseRepresentations = function (words) {
-    let morse = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", 
-    "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", 
-    "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."];
+    let morse = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.",
+     "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", 
+     "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."];
     let transforms = [];
     let alphabet = "abcdefghijklmnopqrstuvwxyz";
 
@@ -16,10 +16,6 @@ var uniqueMorseRepresentations = function (words) {
         if (!transforms.includes(newWord)) {
             transforms.push(newWord);
         }
-        debugger
     }
     return transforms.length;
 };
-
-const words = ["gin", "zen", "gig", "msg"];
-console.log(uniqueMorseRepresentations(words));

@@ -1,4 +1,4 @@
-let reverseOnlyLetters = function (S) {
+var reverseOnlyLetters = function (S) {
     let letters = S.match(/[a-z]/ig);
     let res = "";
 
@@ -7,11 +7,7 @@ let reverseOnlyLetters = function (S) {
             res += letters.pop();
             continue;
         }
-        res += i;
+        res += char;
     }
     return res;
-    
-};
-
-const string = "a-bC-dEf-ghIj";
-console.log(reverseOnlyLetters(string));
+}

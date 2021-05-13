@@ -64,7 +64,7 @@ function parseAndSortDates(dataArray, delim, isAsc = true) {
             let newDate = new Date(data);
             answerArray.push(newDate);
         }
-    })
+    });
 
     if (isAsc) return answerArray.sort();
     return answerArray.reverse();

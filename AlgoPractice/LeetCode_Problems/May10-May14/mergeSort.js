@@ -9,7 +9,7 @@ var sortArray = function (nums) {
 };
 
 function merge(left, right) {
-    const result = [];
+    const result = []
 
     while (left.length && right.length) {
         if (left[0] <= right[0]) {
@@ -21,5 +21,3 @@ function merge(left, right) {
 
     return [...result, ...left, ...right];
 }
-
-console.log(sortArray(nums = [5, 2, 3, 1]));

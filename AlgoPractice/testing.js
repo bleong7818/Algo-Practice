@@ -1,20 +1,17 @@
-var bitwiseComplement = function (n) {
-    const binaryVer = n.toString(2);
-    debugger;
-    for (let i = 0; i < binaryVer.length; i++) {
-        if (binaryVer[i] === "0") {
-            debugger;
-            binaryVer[i] = "1";
-        } else {
-            debugger;
-            binaryVer[i] = "0";
+var commonChars = function (arr) {
+    const res = [];
+    const first = arr[0];
+    const chrMaps = arr.slice(1).map(
+        s => {
+            const map = new Map();
+            for (let i = 0; i < s.length; i++)
+                map.set(s[i], (map.get(s[i]) ?? 0) + 1);
+            return map;
         }
-    }
-    debugger;
-
-    return parseInt(binaryVer, 2);
+    );
+    
+    return chrMaps;
 };
 
-const n = 5;
-
-console.log(bitwiseComplement(n));
+let input = ["bella", "label", "roller"];
+console.log(commonChars(input));

@@ -1,25 +1,20 @@
-var sortArray = function (nums) {
-    if (nums.length <= 1) return nums;
-
-    const middle = Math.floor(nums.length / 2);
-    const left = nums.slice(0, middle);
-    const right = nums.slice(middle);
-
-    return merge(sortArray(left), sortArray(right));
-};
-
-function merge(left, right) {
-    const result = [];
-
-    while (left.length && right.length) {
-        if (left[0] <= right[0]) {
-            result.push(left.shift());
+var bitwiseComplement = function (n) {
+    const binaryVer = n.toString(2);
+    debugger;
+    for (let i = 0; i < binaryVer.length; i++) {
+        if (binaryVer[i] === "0") {
+            debugger;
+            binaryVer[i] = "1";
         } else {
-            result.push(right.shift());
+            debugger;
+            binaryVer[i] = "0";
         }
     }
+    debugger;
 
-    return [...result, ...left, ...right];
-}
+    return parseInt(binaryVer, 2);
+};
 
-console.log(sortArray(nums = [5, 2, 3, 1]));
+const n = 5;
+
+console.log(bitwiseComplement(n));

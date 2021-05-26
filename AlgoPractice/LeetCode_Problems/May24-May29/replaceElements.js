@@ -12,11 +12,12 @@ var replaceElements = function (arr) {
 };
 
 function findGreatest(array) {
-    array.sort((a, b) => b - a);
-    return array[0]
+    let greatest = -Infinity;
+
+    for (const ele of array) {
+        if (ele > greatest) {
+            greatest = ele;
+        }
+    }
+    return greatest;
 }
-
-const arr = [17, 18, 5, 4, 6, 1];
-
-// console.log(replaceElements(arr));
-console.log(findGreatest(arr));

@@ -5,5 +5,6 @@ var findNumbers = function (nums) {
         const stringVer = num.toString();
         if (stringVer.length % 2 === 0) evenNums++;
     }
+    
     return evenNums;
 };

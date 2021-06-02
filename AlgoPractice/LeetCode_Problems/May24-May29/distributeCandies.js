@@ -8,5 +8,6 @@ var distributeCandies = function (candies, num_people) {
         res[idx] += temp;
         candies -= temp;
     }
+    
     return res;
 };

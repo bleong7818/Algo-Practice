@@ -11,5 +11,5 @@ var maxAncestorDiff = function (root) {
             traverse(node.right, max, min)
         );
     }
-    return traverse(root, root.val, root.val)
+    return traverse(root, root.val, root.val);
 };

@@ -9,5 +9,7 @@ var distributeCandies = function (candies, num_people) {
         candies -= temp;
     }
     
+
+    
     return res;
 };

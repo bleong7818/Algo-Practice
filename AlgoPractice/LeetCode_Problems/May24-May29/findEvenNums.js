@@ -6,5 +6,7 @@ var findNumbers = function (nums) {
         if (stringVer.length % 2 === 0) evenNums++;
     }
     
+
+    
     return evenNums;
 };

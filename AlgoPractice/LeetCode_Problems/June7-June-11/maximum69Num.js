@@ -14,8 +14,5 @@ var maximum69Number = function (num) {
 
 function setCharAt(str, index, char) {
     if (index > str.length - 1) return str;
-    return str.substring(0, index) + char + str.substring(index+1);
+    return str.substring(0, index) + char + str.substring(index + 1);
 }
-
-const num = 9669;
-console.log(maximum69Number(num));

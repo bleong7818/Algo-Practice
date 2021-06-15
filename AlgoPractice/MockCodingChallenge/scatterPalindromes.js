@@ -18,7 +18,6 @@ function scatterPalindrome(strToEvaluate) {
 
 function canFormPalindrome(str) {
     let noOfChars = 256;
-
     let charArray = Array(noOfChars).fill(0);
 
     for (let i = 0; i < str.length; i++) {
@@ -34,7 +33,6 @@ function canFormPalindrome(str) {
             }
         }
     }
-
     return true;
 }
 

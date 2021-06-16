@@ -25,7 +25,7 @@ var addTwoNumbers = function (l1, l2) {
         }
     }
 
-    console.log(firstSum, secondSum);
+    
     let total = (firstSum) + (secondSum);
     console.log(total);
 

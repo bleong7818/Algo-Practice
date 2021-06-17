@@ -1,6 +1,7 @@
 var uniqueOccurrences = function (arr) {
     let hashMap = new Map();
 
+    // oh well
     for (const ele of arr) {
         if (hashMap.has(ele)) {
             hashMap.set(ele, hashMap.get(ele) + 1);

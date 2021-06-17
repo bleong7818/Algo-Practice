@@ -8,6 +8,7 @@ var addTwoNumbers = function (l1, l2) {
 
     //     let final = new ListNode();
     //     hello
+    // hi
     let firstSum = iterateList(l1);
     let secondSum = iterateList(l2);
     if (firstSum.length !== secondSum.length) {

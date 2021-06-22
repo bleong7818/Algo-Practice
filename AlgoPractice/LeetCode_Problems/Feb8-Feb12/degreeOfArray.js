@@ -1,7 +1,7 @@
 function findDegree(array) {
     let degree = 0;
     const nums = {};
-
+    // added
     for (let i = 0; i < array.length - 1; i++) {
         const currentNum = array[i];
         if (currentNum in nums) {

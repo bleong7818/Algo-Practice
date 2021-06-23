@@ -18,6 +18,7 @@ function findDegree(array) {
 //     // console.log("ello");
 // }
 // here we go
+// hoooo boy
 
 let nums = [1, 2, 2, 2, 3, 1];
 findDegree(nums);

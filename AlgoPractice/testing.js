@@ -1,42 +1,31 @@
-function deleteProducts(ids, m) {
-    // Write your code here
-    let numHash = {};
-    // debugger;
-    for (let i = 0; i < ids.length; i++) {
-        if (numHash[ids[i]]) {
-            numHash[ids[i]]++;
-        }
-        else {
-            numHash[ids[i]] = 1;
+function slowestKey(keyTimes) {
+    let slowest = keyTimes[0][1];
+    let key = keyTimes[0][0];
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+
+    for (let i = 0; i < keyTimes.length - 1; i++) {
+        let current = keyTimes[i];
+        let next = keyTimes[i + 1];
+        debugger;
+        let time = next[1] - current[1];
+        if (time > slowest) {
+            slowest = time;
+            key = next[0];
+            debugger;
         }
     }
 
-    let valuesArray = Object.values(numHash);
-
-    while (m > 0) {
-        let current = 1;
-        for (let i = 0; i < valuesArray.length; i++) {
-            if (valuesArray[i] === current) {
-                valuesArray.splice(i, 1);
-                m--;
-                // debugger;
-            }
-
-            if (m === 1) {
-                return valuesArray.length;
-            }
-        }
-        if (m > 1) {
-            current++;
-        }
-        // current++;
-    }
-    return valuesArray.length;
+    return alphabet[key];
 }
+let keyTimes = [[0, 3], [20, 5], [2, 6], [15, 7], [9, 8]];
 
-let nums = [1, 1, 1, 2, 2, 3];
-// nums.splice(1, 1);
-let m = 2;
-// console.log(nums);
-
-console.log(deleteProducts(nums, m));
+// 0 3
+// 20 5
+// 2 6
+// 15 7
+// 9 8
+// 19 9
+// 24 10
+// 4 12
+// 3 13
+console.log(slowestKey(keyTimes));

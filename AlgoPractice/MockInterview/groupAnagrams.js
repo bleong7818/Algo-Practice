@@ -11,6 +11,7 @@ function groupAnagrams(words) {
     }
     return Object.values(anagramHash);
     //optimal bounce vectors?
+    //are you serious?
 }
 
 let words = ["yo", "act", "flop", "tac", "foo", "cat", "oy", "olfp"];

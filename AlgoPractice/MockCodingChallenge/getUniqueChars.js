@@ -11,13 +11,9 @@ function getUniqueCharacter(s) {
     }
 
     for (const [key, value] of charMap) {
-        debugger;
         if (value === 1) {
             return s.indexOf(key) + 1;
         }
     }
     return -1;
 }
-
-let stats = "statistics";
-console.log(getUniqueCharacter(stats));

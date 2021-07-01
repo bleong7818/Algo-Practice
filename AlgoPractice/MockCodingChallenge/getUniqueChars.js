@@ -1,5 +1,4 @@
 function getUniqueCharacter(s) {
-    // Write your code here
     let charMap = new Map();
 
     for (let i = 0; i < s.length; i++) {

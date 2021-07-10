@@ -1,23 +1,17 @@
-function getUniqueCharacter(s) {
+function getSpecialSubstring(s, k, charValue) {
     // Write your code here
-    let charMap = new Map();
-
-    for (let i = 0; i < s.length; i++) {
-        if (charMap.has(s[i])) {
-            charMap.set(s[i], charMap.get(s[i]) + 1);
-        } else {
-            charMap.set(s[i], 1);
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    let indexes = [];
+    for (let i = 0; i < charValue.length; i++) {
+        if (charValue[i] === 0) {
+            indexes.push(i);
         }
     }
-
-    for (const [key, value] of charMap) {
-        debugger;
-        if (value === 1) {
-            return s.indexOf(key) + 1;
-        }
+    let letters = ""
+    for (let j = 0; j < indexes.length; j++) {
+        letters += alphabet[alphabet.indexOf(indexes[j])];
     }
-    return -1;
+    return letters;
 }
 
-let stats = "statistics";
-console.log(getUniqueCharacter(stats));
+let charValue = [1010111111111111111];

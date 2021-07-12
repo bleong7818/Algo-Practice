@@ -5,7 +5,7 @@ var sortArray = function (nums) {
     const left = nums.slice(0, middle);
     const right = nums.slice(middle);
     //ayyyyy
-
+    //lmao
     return merge(sortArray(left), sortArray(right));
 };
 

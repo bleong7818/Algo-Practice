@@ -1,5 +1,3 @@
-let string = "loveleetcode";
-
 var firstUniqChar = function (s) {
     let charMap = {};
 
@@ -14,7 +12,6 @@ var firstUniqChar = function (s) {
 
     for (let j = 0; j < s.length; j++) {
         let mapChar = s[j];
-        // debugger
         if (charMap[mapChar] !== "dup") {
             return j;
         }
@@ -22,5 +19,3 @@ var firstUniqChar = function (s) {
 
     return -1;
 };
-
-console.log(firstUniqChar(string));

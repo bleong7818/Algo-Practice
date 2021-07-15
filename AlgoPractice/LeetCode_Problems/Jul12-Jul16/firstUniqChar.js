@@ -16,6 +16,6 @@ var firstUniqChar = function (s) {
             return j;
         }
     }
-
+    //hello?
     return -1;
 };

@@ -9,6 +9,7 @@ function droppedRequests(requestTime) {
         if (request >= 10) {
             let small = findSmall(request, requestTime);
             let smallIndex = requestTime.indexOf(small);
+            //is this defined?
         }
         let twentySlice = requestTime.slice(smallIndex, i);
         if (twentySlice.length > 20) {

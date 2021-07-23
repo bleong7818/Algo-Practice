@@ -18,6 +18,6 @@ var firstUniqChar = function (s) {
     }
     //hello?
     //hello
-    //hellooooo
+    //helloooooo
     return -1;
 };

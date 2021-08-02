@@ -4,12 +4,13 @@ var sortArray = function (nums) {
     const middle = Math.floor(nums.length / 2);
     const left = nums.slice(0, middle);
     const right = nums.slice(middle);
-
+    //ayyyyy
+    //lmao
     return merge(sortArray(left), sortArray(right));
 };
 
 function merge(left, right) {
-    const result = []
+    const result = [];
 
     while (left.length && right.length) {
         if (left[0] <= right[0]) {

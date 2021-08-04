@@ -21,7 +21,7 @@ function isWord(word) {
                 return false;
             }
         }
-    } 
+    }
 
     return true;
 }

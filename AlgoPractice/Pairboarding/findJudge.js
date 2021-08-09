@@ -7,16 +7,16 @@ var findJudge = function (n, trust) {
     for (let i = 1; i <= n; i++) {
         hash[i] = [[], []];
     }
-    
+
     for (let j = 0; j < trust.length; j++) {
         let mini = trust[j];
         let truster = mini[0];
         let trusted = mini[1];
-        
+
         hash[truster][0].push(trusted);
         hash[trusted][1].push(truster);
     }
-    
+
     // let keyArray = Object.keys(hash);
     console.log(hash);
     for (let key in hash) {
@@ -29,6 +29,7 @@ var findJudge = function (n, trust) {
             //                 let newArray = keyArray.slice(0, index) + keyArray.slice(index + 1);
         }
     }
+    //yoyoyoyoy
 
     return -1;
 };

@@ -12,6 +12,7 @@ function rollTheString(s, roll) {
         }
         splitString = (slicedString.join("") + otherPart.join("")).split("");
     }
+    //ayyy lmao
     //hello
     //yolo
     return splitString.join("");

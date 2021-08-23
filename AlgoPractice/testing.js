@@ -1,26 +1,23 @@
-function numPlayers(k, scores) {
-    // Write your code here
-    let ranks = [];
-    scores.sort();
-    // console.log(scores);
-    for (let i = 0; i < scores.length; i++) {
-        if (scores[i] !== scores[i - 1]) {
-            ranks.push(i + 1);
-        }
-        else {
-            ranks.push(ranks[ranks.length - 1]);
-        }
-    }
+function rollTheString(s, roll) {
+    let newStringSplit = s.split("");
+    for (let i = 0; i < roll.length; i++) {
+        let rollNum = roll[i];
+        for (let j = 0; j <= rollNum; j++) {
+            let currentChar = newStringSplit[j];
+            let newChar = rollChar(currentChar);
+            newStringSplit[j] = newChar;
 
-    let count = 0;
-    for (let j = 0; j < ranks.length; j++) {
-        if (ranks[j] <= k) count++;
+        }
     }
-    console.log(ranks);
-    // console.log(scores.sort());
-    return count;
+    return newStringSplit.join("");
 }
 
-let scores = [5, 2, 2, 3, 4, 5];
-console.log(scores.indexOf(2));
-// console.log(numPlayers(4, scores));
+function rollChar(char) {
+    let alphabet = "abcdefghijklmnopqrstuvwxyz";
+    let charIndex = alphabet.indexOf(char);
+    let newChar = alphabet[(charIndex + 1) % 26];
+    return newChar;
+}
+
+let string = "abz";
+let roll = [3, 2, 1];

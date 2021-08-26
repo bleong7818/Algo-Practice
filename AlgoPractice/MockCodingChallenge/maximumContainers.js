@@ -17,18 +17,3 @@ function maximumContainers(scenarios) {
     }
     return total;
 }
-
-// 3
-// 10 2 5
-// 12 4 4
-// 6 2 2
-
-// 3 
-console.log(maximumContainers([3]));
-console.log(maximumContainers([10, 2, 5]));
-console.log(maximumContainers([12, 4, 4]));
-console.log(maximumContainers([6, 2, 2]));
-
-// 6
-// 3
-// 5

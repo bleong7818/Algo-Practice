@@ -7,7 +7,7 @@ function maximumContainers(scenarios) {
     let containers = Math.floor(money / cost);
     let total = containers;
     while (containers > 1) {
-        // console.log(containers)
+        
         remainder += (containers % emptyExchange);
         containers = Math.floor(containers / emptyExchange);
         total += containers;

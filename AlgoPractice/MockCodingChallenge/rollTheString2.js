@@ -16,6 +16,8 @@ function rollTheString(s, roll) {
     //ayyy lmao
     //hello
     //yolo
+
+    
     return splitString.join("");
 }
 

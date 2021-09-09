@@ -1,22 +1,4 @@
-// function minimumMoves(arr1, arr2) {
-//     let moves = 0;
 
-//     for (let i = 0; i < arr1.length; i++) {
-//         const numArray1 = arr1[i].toString().split("").map(Number);
-//         const numArray2 = arr2[i].toString().split("").map(Number);
-//         debugger
-//         for (let j = 0; j < numArray1.length; j++) {
-//             const current1num = numArray1[j];
-//             const current2num = numArray2[j];
-
-//             let difference = Math.abs(current2num - current1num);
-//             debugger;
-//             moves += difference;
-//         }
-//     }
-//     return moves;
-// }
-// return my soul
 
 function minimumMoves(arr1, arr2) {
     let moves = 0;

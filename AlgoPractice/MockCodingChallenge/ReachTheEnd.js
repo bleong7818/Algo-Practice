@@ -1,6 +1,5 @@
 function reachTheEnd(grid, maxTime) {
-    // Write your code here
-    // write my code here
+
     timeTaken = 0;
     let row = 0;
     let column = 0;

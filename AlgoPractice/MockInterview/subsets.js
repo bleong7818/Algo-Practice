@@ -21,10 +21,6 @@
 // Output: "ay"
 
 
-/**
- * @param {string} s
- * @return {string}
- */
 var removeDuplicates = function (str) {
     let string = "";
     let isDuplicate = false;

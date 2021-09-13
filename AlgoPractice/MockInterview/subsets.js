@@ -20,7 +20,7 @@
 // Input: s = "azxxzy"
 // Output: "ay"
 
-
+// diddy kong
 var removeDuplicates = function (str) {
     let string = "";
     let isDuplicate = false;

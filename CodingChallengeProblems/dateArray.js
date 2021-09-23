@@ -55,7 +55,7 @@ function parseAndSortDates(dataArray, delim, isAsc) {
     // However, if there are less than 10 elements in the dateArray, then the time complexity for the function changes to
     // O(n^2) due to V8 choosing to run Insertion Sort instead of Quick Sort.
 }
-
+// superfluous
 function parseAndSortDates(dataArray, delim, isAsc = true) {
     const answerArray = [];
 

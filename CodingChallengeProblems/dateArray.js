@@ -57,6 +57,7 @@ function parseAndSortDates(dataArray, delim, isAsc) {
 }
 // superfluous
 //extra
+//yolo
 function parseAndSortDates(dataArray, delim, isAsc = true) {
     const answerArray = [];
 

@@ -37,7 +37,8 @@ function parseAndSortDates(dataArray, delim, isAsc) {
     }
 
     // This section then looks at the isAsc boolean and determines if we ought to return the dateArray values in 
-    // either ascending order is isAsc === true, or descending order if isAsc === false. As for time and space
+    // either ascending order is isAsc === true, or descending order if isAsc === false. 
+    // As for time and space
     // complexity, those values will differ depending on the number of elemtents in the dateArray. Assuming this 
     // .sort is being run in V8 in Google's Javascript engine, i.e. Chrome and Node, .sort will have a time 
     // complexity of O(nlog(n)) and a space complexity of O(nlog(n)) if there are 10 or more elements in dateArray
@@ -54,11 +55,12 @@ function parseAndSortDates(dataArray, delim, isAsc) {
     // However, if there are less than 10 elements in the dateArray, then the time complexity for the function changes to
     // O(n^2) due to V8 choosing to run Insertion Sort instead of Quick Sort.
 }
-
+// superfluous
+//extra
+//yolo
 function parseAndSortDates(dataArray, delim, isAsc = true) {
     const answerArray = [];
 
-    //formating
     dataArray.forEach(data => {
         if (parseInt(data) !== NaN && data.includes(delim)) {
             let newDate = new Date(data);

@@ -16,6 +16,7 @@ var maxArea = function (height) {
     return max;
 };
 // better version
+// even betterer
 var maxArea = function (height) {
     if (!height.length) return 0;
 

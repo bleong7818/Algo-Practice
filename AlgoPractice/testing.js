@@ -14,8 +14,10 @@ function itemsSort(items) {
     // for (const key of itemHash) {
     //     if (itemHash[key] = 1) {
 
-    //     }
+    //     }// hello
     // }
+
+
     console.log(itemHash);
     return getSortedHash(itemHash);
 }

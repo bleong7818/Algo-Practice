@@ -8,6 +8,7 @@ function howMany(sentence) {
     return words;
 }
 //timeline
+//timeline :(
 function isWord(word) {
     let alphabet = 'abcdefghijklmnopqrstuvwxyz-ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let punctuation = ".,?!";

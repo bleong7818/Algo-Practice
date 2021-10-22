@@ -11,7 +11,6 @@ function getUniqueCharacter(s) {
         // debugger
     }
     let values = Object.values(uniqueHash).sort((a, b) => a - b);
-    debugger
     for (let j = 0; j < values.length; j++) {
         if (values[j] !== -1) {
             return values[j];

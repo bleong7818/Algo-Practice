@@ -1,38 +1,28 @@
-function itemsSort(items) {
-    // Write your code here
-    let itemHash = {};
-    let newArray = [];
-    for (let i = 0; i < items.length; i++) {
-        let item = items[i];
-        if (itemHash[item]) {
-            itemHash[item]++;
-        } else {
-            itemHash[item] = 1;
+function minTime(processorTime, taskTime) {
+    
+    let sorted = taskTime.sort((a, b) => a - b);
+    let splitVersion = splitByFour(sorted);
+    let orderedProcess = processorTime.sort((b, a) => a - b);
+    let max = Infinity;
+    for (let i = 0; i < orderedProcess.length; i++) {
+        let processor = orderedProcess[i];
+        let maxTask = splitVersion[i][3];
+        let maxSum = processor + maxTask;
+        debugger
+        if (max > maxSum) {
+            max = maxSum;
         }
     }
-
-    // for (const key of itemHash) {
-    //     if (itemHash[key] = 1) {
-
-    //     }// hello
-    // }
-    //yoooooooo
-    
-
-
-    console.log(itemHash);
-    return getSortedHash(itemHash);
+    return max;
 }
-function getSortedHash(inputHash) {
-    var resultHash = {};
-
-    var keys = Object.keys(inputHash);
-    keys.sort(function (a, b) {
-        return inputHash[a] - inputHash[b]
-    }).forEach(function (k) {
-        resultHash[k] = inputHash[k];
-    });
-    return resultHash;
+function splitByFour(array) {
+    let splitArray = [];
+    for (let i = 4; i <= array.length; i+= 4) {
+        let piece = array.slice(i - 4, i);
+        splitArray.push(piece);
+    }
+    return splitArray;
 }
-let items = [3, 5, 4, 5, 4, 6];
-console.log(itemsSort(items));
+const processorTime = [8, 10];
+const taskTimes = [2, 3, 1, 2, 5, 8, 4, 3];
+console.log(minTime(processorTime, taskTimes));

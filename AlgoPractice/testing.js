@@ -8,7 +8,6 @@ function minTime(processorTime, taskTime) {
         let processor = orderedProcess[i];
         let maxTask = splitVersion[i][3];
         let maxSum = processor + maxTask;
-        debugger
         if (max > maxSum) {
             max = maxSum;
         }

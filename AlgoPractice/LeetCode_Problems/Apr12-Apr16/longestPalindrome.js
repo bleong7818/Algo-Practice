@@ -13,4 +13,4 @@ var longestPalindrome = function (s) {
 
     if (map.size > 0) return total + 1;
     return total;
-}
+};

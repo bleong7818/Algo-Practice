@@ -20,10 +20,3 @@ function isIncreasing(months) {
     return true;
 }
 let prices = [1, 2, 3, 3, 4, 5];
-// let copy = [...prices];
-// let sortedPrices = copy.sort();
-// let otherCopy = [3, 5, 5, 7, 8];
-let k = 3;
-console.log(countHighlyProfitableMonths(prices, k));
-// console.log(prices == sortedPrices);
-// console.log(otherCopy, sortedPrices);

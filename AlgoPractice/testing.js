@@ -6,4 +6,4 @@ const address = {
 const {street: s, city: c} = address;
 console.log(s);
 console.log(c);
-//hello
+//hello, hello!

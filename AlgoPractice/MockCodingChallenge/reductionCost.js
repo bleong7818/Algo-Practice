@@ -1,3 +1,4 @@
+
 function reductionCost(num) {
     // Write your code here
     num.sort((a, b) => a - b);
@@ -12,10 +13,7 @@ function reductionCost(num) {
         num = sliced;
         sliced.push(sum);
         num.sort((a, b) => a - b);
-        debugger;
     }
     return cost;
 }
-
-let array = [1, 2, 3];
-console.log(reductionCost(array));
+//yoyoyo

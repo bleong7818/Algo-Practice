@@ -20,6 +20,7 @@ function swap(array) {
 }
 //[2, 1], [3, 3] [4, 6], [5, 10], [6, 15]
 //nitroboost
+//nitrowin
 // length / 2 * [length - 1];
 let small = ['a', 'b', 'c']; //=> [a, c, b], [c, b, a], [b, a, c]
 

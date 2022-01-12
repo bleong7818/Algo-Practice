@@ -24,6 +24,8 @@ function getMinLength(a, k) {
     return a.length;
 }
 
+//sigh
+
 let array = [2, 3, 3, 7, 3, 5];
 let k = 20;
 console.log(getMinLength(array, k));

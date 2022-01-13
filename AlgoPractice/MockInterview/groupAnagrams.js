@@ -15,5 +15,5 @@ function groupAnagrams(words) {
 let words = ["yo", "act", "flop", "tac", "foo", "cat", "oy", "olfp"];
 console.log(groupAnagrams(words));
 let $h = [1];
-console.log($)
+console.log($);
 // Output = [["yo", "oy"], ["flop", "olfp"], ["act", "tac", "cat"], ["foo"]]

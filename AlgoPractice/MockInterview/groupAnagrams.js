@@ -11,7 +11,7 @@ function groupAnagrams(words) {
     }
     return Object.values(anagramHash);
 }
-//useful
+//useful stuff
 let words = ["yo", "act", "flop", "tac", "foo", "cat", "oy", "olfp"];
 console.log(groupAnagrams(words));
 let $h = [1];

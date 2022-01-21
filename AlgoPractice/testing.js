@@ -1,8 +1,3 @@
-//5 
-// x = 3
-// y = 6
+let array = [1, 2, 3, 4, 5];
 
-// 5 != x || != 6
-// 5 != x && != y
-
-if x < 5 && x > 3
+console.log(array.slice(0, 1));

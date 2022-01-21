@@ -34,6 +34,7 @@ function canFormPalindrome(str) {
         }
     }
     return true;
+    // hellllll yeah
 }
 
 function couldBePalindrome(string) {

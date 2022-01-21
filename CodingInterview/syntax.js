@@ -22,6 +22,7 @@ function swap(array) {
 //nitroboost
 //commit
 //nitrowin
+//4wgrmrghnet'odhn'tekdh
 //yooyoyoyo
 // length / 2 * [length - 1];
 let small = ['a', 'b', 'c']; //=> [a, c, b], [c, b, a], [b, a, c]
